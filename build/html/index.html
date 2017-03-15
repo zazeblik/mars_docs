@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Руководство по установке и запуску &#8212; MARS 1.4.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="">
+<span id="id1"></span><h1>Руководство по установке и запуску<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="">
+<span id="id2"></span><h1>Мультиканальная система обработки запросов<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+<p>Версия 2.0.1.220416</p>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h1>Наименование системы<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+<p>Мультиканальная система обработки запросов MARS (Multi-channel Automatic Response System).</p>
+</div>
+<div class="section" id="mars">
+<span id="mars"></span><h1>Установка и запуск MARS<a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="">
+<span id="id4"></span><h2>Предварительные условия<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>Прежде чем установить и запустить MARS, нужно выполнить предварительные условия. Операционные системы, на которых была проверена работа MARS – это Windows 7 и Ubuntu 14.04 Server.</p>
+</div>
+<div class="section" id="node-js">
+<span id="node-js"></span><h2>Node.js<a class="headerlink" href="#node-js" title="Permalink to this headline">¶</a></h2>
+<p>Для запуска MARS нужно установить Node.js. Версия Node.js, под которой была проверена работа MARS – 4.2.1.</p>
+<p>Для того, чтобы установить Node.js под Windows, скачиваем дистрибутив по ссылке <a class="reference external" href="https://nodejs.org/download/release/v4.2.1/node-v4.2.1-x86.msi">https://nodejs.org/download/release/v4.2.1/node-v4.2.1-x86.msi</a>, например в папку «C:\Downloads». Устанавливаем Node JS.  Подводим курсор мыши к кнопке «Пуск»,</p>
+<p>нажимаем правую клавишу мыши. Подводим курсор мыши к пункту «Проводник» и щелчком левой клавишей мыши выбираем его.</p>
+<p>Открываем папку « C:\Downloads»:</p>
+<ul class="simple">
+<li>Подводим курсор мыши к папке «Компьютер» и делаем по ней двойной щелчок левой клавишей мыши (щёлкнуть один раз и сразу же щёлкнуть второй раз);</li>
+<li>Подводим курсор мыши к папке «С:» и делаем по ней двойной щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к папке «Downloads» и делаем по ней один щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к файлу «node-v4.2.1-x86.msi» и делаем по нему двойной щелчок левой клавишей мыши.</li>
+</ul>
+<p>Всё. Установка завершена.</p>
+<p>Для установки под Ubuntu 14.04 Server выполним следующие команды:</p>
+<ul class="simple">
+<li>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</li>
+<li>sudo apt-get install -y nodejs</li>
+</ul>
+</div>
+<div class="section" id="git">
+<span id="git"></span><h2>Установка git- клиента<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p>Для обращения к репозиторию MARS нужно установить git-клиента. Для установки консольного клиента под Windows скачиваем дистрибутив по ссылке <a class="reference external" href="https://github.com/git-for-windows/git/releases/download/v2.6.3.windows.1/Git-2.6.3-32-bit.exe">https://github.com/git-for-windows/git/releases/download/v2.6.3.windows.1/Git-2.6.3-32-bit.exe</a>, например в папку «C:\Downloads».  Устанавливаем git-клиента. Подводим курсор мыши к кнопке «Пуск»,</p>
+<p>нажимаем правую клавишу мыши. Подводим курсор мыши к пункту «Проводник» и щелчком левой клавишей мыши выбираем его.</p>
+<p>Открываем папку « C:\Downloads »:</p>
+<ol class="simple">
+<li>Подводим курсор мыши к папке «Компьютер» и делаем по ней двойной щелчок левой клавишей мыши (щёлкнуть один раз и сразу же щёлкнуть второй раз);</li>
+<li>Подводим курсор мыши к папке «С:» и делаем по ней двойной щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к папке «Downloads» и делаем по ней один щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к файлу «Git-2.6.3-32-bit.exe» и делаем по нему двойной щелчок левой клавишей мыши.</li>
+</ol>
+<p>Всё. Установка завершена.</p>
+<p>Для установки под Ubuntu 14.04 Server выполним следующую команду:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sox">
+<span id="sox"></span><h2>Установка SoX<a class="headerlink" href="#sox" title="Permalink to this headline">¶</a></h2>
+<p>Для работы со звуком в проекте MARS нужна утилита SoX. Для установкипод операционную систему Windows скачиваем дистрибутив по ссылке <a class="reference external" href="http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.exe?r=&amp;amp;ts=1448462722&amp;amp;use_mirror=vorboss">http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.exe?r=<p>&amp;amp;</p>
+ts=1448462722<p>&amp;amp;</p>
+use_mirror=vorboss</a>, например, в папку «C:\Downloads». Устанавливаем SoX. Подводим курсор мыши к кнопке «Пуск»,</p>
+<p>нажимаем правую клавишу мыши. Подводим курсор мыши к пункту «Проводник» и щелчком левой клавишей мыши выбираем его.</p>
+<p>Открываем папку « C:\Downloads »:</p>
+<ol class="simple">
+<li>Подводим курсор мыши к папке «Компьютер» и делаем по ней двойной щелчок левой клавишей мыши (щёлкнуть один раз и сразу же щёлкнуть второй раз);</li>
+<li>Подводим курсор мыши к папке «С:» и делаем по ней двойной щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к папке «Downloads» и делаем по ней один щелчок левой клавишей мыши;</li>
+<li>Подводим курсор мыши к файлу «sox-14.4.2-win32.exe» и делаем по нему двойной щелчок левой клавишей мыши.</li>
+</ol>
+<p>Ждём, когда установится.</p>
+<p>Всё. Установка завершена.</p>
+<p>Для установки под Ubuntu 14.04 Server нужно выполним следующую команду:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sox</span>
+</pre></div>
+</div>
+<p>Далее пропишем путь до файла sox.exe в переменную окружения path. В linux это делается автоматически. Сделаем это для Windows. Нажмём комбинацию клавиш <p>&amp;lt;</p>
+Win+Pause<p>&amp;gt;</p>
+</p>
+<p>Путь задан. Теперь перзагружаем Windows для вступления в силу изменений.</p>
+</div>
+<div class="section" id="mars">
+<span id="id5"></span><h2>MARS<a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h2>
+<p>Делаем локальную копию стабильной версии проекта:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">komunikator</span><span class="o">/</span><span class="n">mars</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>После того, как локальная копия сделана, нужно установить зависимости проекта командой npm i из корневого каталога проекта (там, где находится файл package.json).</p>
+</div>
+<div class="section" id="mars">
+<span id="id6"></span><h2>Запуск MARS<a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h2>
+<p>Для запуска нужно выполнить команду <em>node mars</em> из корневого каталога проекта.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Руководство по установке и запуску</a></li>
+<li><a class="reference internal" href="#">Мультиканальная система обработки запросов</a></li>
+<li><a class="reference internal" href="#">Наименование системы</a></li>
+<li><a class="reference internal" href="#mars">Установка и запуск MARS</a><ul>
+<li><a class="reference internal" href="#">Предварительные условия</a></li>
+<li><a class="reference internal" href="#node-js">Node.js</a></li>
+<li><a class="reference internal" href="#git">Установка git- клиента</a></li>
+<li><a class="reference internal" href="#sox">Установка SoX</a></li>
+<li><a class="reference internal" href="#mars">MARS</a></li>
+<li><a class="reference internal" href="#mars">Запуск MARS</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, NRP.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
